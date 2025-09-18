@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seth Claycomb - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.4;
+        color: #333;
+        background: #f8f9fa;
+        padding: 20px;
+    }
+    
+    .resume {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .header {
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: white;
+        padding: 40px 40px 30px;
+        text-align: center;
+    }
+    
+    .name {
+        font-size: 2.5em;
+        font-weight: 300;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+    }
+    
+    .contact {
+        font-size: 1.1em;
+        opacity: 0.95;
+    }
+    
+    .content {
+        padding: 0;
+    }
+    
+    .section {
+        padding: 30px 40px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .section:last-child {
+        border-bottom: none;
+    }
+    
+    .section-title {
+        font-size: 1.3em;
+        font-weight: 600;
+        color: #1e3c72;
+        margin-bottom: 20px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #e3f2fd;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .summary-text {
+        font-size: 1.05em;
+        line-height: 1.6;
+        color: #555;
+        text-align: justify;
+    }
+    
+    .strengths-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin-top: 15px;
+    }
+    
+    .strength-item {
+        display: flex;
+        align-items: flex-start;
+        background: #f8f9ff;
+        padding: 15px;
+        border-radius: 6px;
+        border-left: 4px solid #2a5298;
+    }
+    
+    .strength-icon {
+        color: #2a5298;
+        font-weight: bold;
+        margin-right: 10px;
+        font-size: 1.2em;
+    }
+    
+    .strength-content {
+        flex: 1;
+    }
+    
+    .strength-title {
+        font-weight: 600;
+        color: #1e3c72;
+        margin-bottom: 5px;
+    }
+    
+    .strength-desc {
+        font-size: 0.95em;
+        color: #666;
+    }
+    
+    .job {
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .job:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .job-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 8px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .job-title {
+        font-weight: 600;
+        font-size: 1.1em;
+        color: #1e3c72;
+    }
+    
+    .job-company {
+        font-weight: 500;
+        color: #2a5298;
+    }
+    
+    .job-date {
+        color: #666;
+        font-weight: 500;
+        font-size: 0.95em;
+    }
+    
+    .job-location {
+        color: #888;
+        font-style: italic;
+        font-size: 0.95em;
+    }
+    
+    .job-bullets {
+        list-style: none;
+        margin-top: 12px;
+    }
+    
+    .job-bullets li {
+        margin-bottom: 8px;
+        padding-left: 20px;
+        position: relative;
+        line-height: 1.5;
+        color: #555;
+    }
+    
+    .job-bullets li:before {
+        content: "▸";
+        color: #2a5298;
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+    
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    
+    .project-item {
+        background: #f8f9ff;
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 4px solid #2a5298;
+    }
+    
+    .project-title {
+        font-weight: 600;
+        color: #1e3c72;
+        margin-bottom: 8px;
+    }
+    
+    .project-desc {
+        color: #666;
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+    
+    .education-item {
+        margin-bottom: 25px;
+    }
+    
+    .education-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 5px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .degree {
+        font-weight: 600;
+        color: #1e3c72;
+        font-size: 1.05em;
+    }
+    
+    .school {
+        color: #2a5298;
+        font-weight: 500;
+    }
+    
+    .education-date {
+        color: #666;
+        font-weight: 500;
+    }
+    
+    .education-details {
+        color: #666;
+        margin-top: 5px;
+        font-size: 0.95em;
+    }
+    
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .skill-category {
+        background: #f8f9ff;
+        padding: 15px;
+        border-radius: 6px;
+        border-left: 4px solid #2a5298;
+    }
+    
+    .skill-category-title {
+        font-weight: 600;
+        color: #1e3c72;
+        margin-bottom: 8px;
+    }
+    
+    .skill-list {
+        color: #666;
+        font-size: 0.95em;
+    }
+    
+    .references-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .reference-item {
+        background: #f8f9ff;
+        padding: 20px;
+        border-radius: 8px;
+        text-center;
+        border-left: 4px solid #2a5298;
+    }
+    
+    .reference-name {
+        font-weight: 600;
+        color: #1e3c72;
+        margin-bottom: 5px;
+    }
+    
+    .reference-title {
+        color: #2a5298;
+        font-size: 0.95em;
+        margin-bottom: 5px;
+    }
+    
+    .reference-company {
+        color: #666;
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
+    
+    .reference-phone {
+        color: #666;
+        font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+        body { padding: 10px; }
+        .header { padding: 30px 20px 20px; }
+        .section { padding: 20px; }
+        .name { font-size: 2em; }
+        .job-header { flex-direction: column; align-items: flex-start; }
+        .education-header { flex-direction: column; align-items: flex-start; }
+    }
+</style>
+```
+
+</head>
+<body>
+    <div class="resume">
+        <div class="header">
+            <h1 class="name">Seth Claycomb</h1>
+            <div class="contact">
+                <strong>(818) 480-8430</strong> | <strong>sethskyler@gmail.com</strong>
+            </div>
+        </div>
+
+```
+    <div class="content">
+        <div class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary-text">
+                Results-driven sales professional with 6+ years of B2B and consultative selling experience, complemented by leadership roles in construction management and hospitality operations. Proven track record of building client relationships, managing complex logistics, and driving revenue growth. Technical proficiency in Python, SQL, and automation tools, with a passion for leveraging technology to solve business challenges. Seeking to join IBM's Digital Sales team to help clients transform through innovative technology solutions.
+            </p>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Core Strengths</h2>
+            <div class="strengths-grid">
+                <div class="strength-item">
+                    <span class="strength-icon">💬</span>
+                    <div class="strength-content">
+                        <div class="strength-title">Consultative Selling</div>
+                        <div class="strength-desc">Expert at identifying client needs and presenting tailored solutions</div>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <span class="strength-icon">🤝</span>
+                    <div class="strength-content">
+                        <div class="strength-title">B2B Relationship Management</div>
+                        <div class="strength-desc">Built and maintained long-term partnerships across diverse industries</div>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <span class="strength-icon">⚙️</span>
+                    <div class="strength-content">
+                        <div class="strength-title">Technical Acumen</div>
+                        <div class="strength-desc">Proficient in Python, SQL, APIs, and automation development</div>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <span class="strength-icon">👥</span>
+                    <div class="strength-content">
+                        <div class="strength-title">Leadership & Team Management</div>
+                        <div class="strength-desc">Successfully supervised teams and coordinated complex projects</div>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <span class="strength-icon">🎯</span>
+                    <div class="strength-content">
+                        <div class="strength-title">Problem-Solving</div>
+                        <div class="strength-desc">Strong analytical skills with experience in process optimization</div>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <span class="strength-icon">🎓</span>
+                    <div class="strength-content">
+                        <div class="strength-title">Client Education</div>
+                        <div class="strength-desc">Skilled at explaining technical concepts to non-technical audiences</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Field Technician & Client Consultant</div>
+                        <div class="job-company">Pest Control Services</div>
+                    </div>
+                    <div>
+                        <div class="job-date">May 2025 – September 2025</div>
+                        <div class="job-location">Los Angeles County, CA</div>
+                    </div>
+                </div>
+                <ul class="job-bullets">
+                    <li>Conducted property assessments and educated homeowners on pest prevention strategies</li>
+                    <li>Presented service recommendations based on technical analysis and client-specific needs</li>
+                    <li>Built trust through transparent communication and follow-up service excellence</li>
+                    <li>Achieved high customer satisfaction scores through consultative approach to problem-solving</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Project Supervisor & Operations Manager</div>
+                        <div class="job-company">JB Construction</div>
+                    </div>
+                    <div>
+                        <div class="job-date">July 2018 – May 2025</div>
+                        <div class="job-location">Malibu, CA</div>
+                    </div>
+                </div>
+                <ul class="job-bullets">
+                    <li>Managed luxury construction projects for high-profile clients, ensuring discretion and exceptional service delivery</li>
+                    <li>Coordinated subcontractors, suppliers, and delivery schedules, maintaining project timelines and budgets</li>
+                    <li>Built strong vendor relationships through effective negotiation and partnership management</li>
+                    <li>Maintained compliance with safety regulations and quality standards across all job sites</li>
+                    <li>Served as primary client liaison, providing regular updates and managing expectations</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Lead Server & Assistant Manager</div>
+                        <div class="job-company">Chi-Chi's Pizza</div>
+                    </div>
+                    <div>
+                        <div class="job-date">May 2021 – March 2023</div>
+                        <div class="job-location">Santa Clarita, CA</div>
+                    </div>
+                </div>
+                <ul class="job-bullets">
+                    <li>Led front-of-house operations, supervising staff and ensuring optimal customer experience</li>
+                    <li>Managed shift scheduling, inventory control, and operational efficiency improvements</li>
+                    <li>Handled customer inquiries and resolved issues with a focus on retention and satisfaction</li>
+                    <li>Trained new team members on service standards and point-of-sale systems (Aloha POS, Toast)</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Freight Dispatcher & Sales Representative</div>
+                        <div class="job-company">MoveFreight</div>
+                    </div>
+                    <div>
+                        <div class="job-date">May 2012 – July 2021</div>
+                        <div class="job-location">Glendale, CA</div>
+                    </div>
+                </div>
+                <ul class="job-bullets">
+                    <li>Generated and qualified leads through cold calling and relationship building with potential B2B clients</li>
+                    <li>Provided competitive rate quotes and coordinated complex logistics solutions</li>
+                    <li>Managed customer expectations and delivery requirements across multiple trucking partnerships</li>
+                    <li>Maintained detailed pipeline tracking and followed up on opportunities to close deals</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Projects & Technical Work</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <div class="project-title">Python Automation Scripts</div>
+                    <div class="project-desc">Developed custom automation tools for data processing and workflow optimization</div>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">SQL Database Management</div>
+                    <div class="project-desc">Created queries and reports for business intelligence and operational insights</div>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">API Integration Projects</div>
+                    <div class="project-desc">Built automated systems connecting multiple platforms and services</div>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">GitHub Portfolio</div>
+                    <div class="project-desc">Maintained active repository showcasing coding projects and technical documentation</div>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">Cloudflare Workers</div>
+                    <div class="project-desc">Deployed serverless functions for web performance and automation tasks</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <div class="degree">Bachelor of Science: Criminal Justice</div>
+                        <div class="school">California State University — Los Angeles, CA</div>
+                    </div>
+                    <div class="education-date">August 2016 – May 2019</div>
+                </div>
+                <div class="education-details">
+                    • Honors College Graduate, 3.92 GPA<br>
+                    • Active Member, Alpha Phi Sigma (Criminal Justice Honors Society)
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <div class="degree">Associate of Arts: Liberal Arts (Arts & Humanities)</div>
+                        <div class="degree">Associate of Science Transfer: Administration of Justice</div>
+                        <div class="school">Los Angeles City College — Los Angeles, CA</div>
+                    </div>
+                    <div class="education-date">February 2013 – May 2016</div>
+                </div>
+                <div class="education-details">
+                    • President's Honor List and Dean's Honor List distinctions
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-title">Programming</div>
+                    <div class="skill-list">Python, SQL, JavaScript</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Tools & Platforms</div>
+                    <div class="skill-list">GitHub, Cloudflare Workers, APIs, MS Office Suite, QuickBooks</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Point of Sale Systems</div>
+                    <div class="skill-list">Aloha POS, Toast POS</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Certifications</div>
+                    <div class="skill-list">California Food Handler's Certificate</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">References</h2>
+            <div class="references-grid">
+                <div class="reference-item">
+                    <div class="reference-name">Joseph Bogosian</div>
+                    <div class="reference-title">Owner</div>
+                    <div class="reference-company">JB Construction</div>
+                    <div class="reference-phone">(626) 376-2539</div>
+                </div>
+                <div class="reference-item">
+                    <div class="reference-name">Ivan Alvarez</div>
+                    <div class="reference-title">Manager</div>
+                    <div class="reference-company">Chi-Chi's Pizza</div>
+                    <div class="reference-phone">(626) 376-2539</div>
+                </div>
+                <div class="reference-item">
+                    <div class="reference-name">Cynthia Juarez</div>
+                    <div class="reference-title">HR Director</div>
+                    <div class="reference-company">MoveFreight</div>
+                    <div class="reference-phone">(818) 548-4378</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+</body>
+</html>
